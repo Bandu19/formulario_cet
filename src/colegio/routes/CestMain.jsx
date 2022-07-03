@@ -1,6 +1,4 @@
-import { Navigate, Route, Routes } from "react-router";
 import { Navbar, SectionHeader, Footer } from "../../ui";
-import { Contenido, Formulario } from "../pages";
 
 //--- RAMA HIJO
 export const CestMain = () => {
@@ -15,12 +13,25 @@ export const CestMain = () => {
                <SectionHeader />
             </section>
          </header>
-         <Routes>
-            <Route path="marvel" element={<Contenido />} />
-            <Route path="formulario" element={<Formulario />} />
+         <main className="container">
+            <div className="row imagen_estilo3 centrar-texto pb-3">
+               <div className="form-register">
+                  <h4>Formulario Registro</h4>
 
-            <Route path="/" element={<Navigate to="/marvel" />} />
-         </Routes>
+                  <input
+                     className="controls"
+                     type="text"
+                     name="nombres"
+                     placeholder="Folio de Constancia"
+                  />
+
+                  <p>
+                     Estoy de acuerdo con <a href="#">Terminos y Condiciones</a>
+                  </p>
+                  <input className="botons" type="submit" value="Descargar" />
+               </div>
+            </div>
+         </main>
 
          <footer className="bg-dark text-white">
             <Footer />
